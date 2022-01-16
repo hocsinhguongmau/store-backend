@@ -1,7 +1,10 @@
+import { MdBusinessCenter } from 'react-icons/md'
+
 export default {
   name: 'vendor',
   title: 'Vendor',
   type: 'document',
+  icon: MdBusinessCenter,
   fields: [
     {
       name: 'title',
@@ -21,6 +24,16 @@ export default {
       name: 'logo',
       title: 'logo',
       type: 'image',
+    },
+    {
+      name: 'famous',
+      title: 'Famous',
+      type: 'boolean',
+    },
+    {
+      name: 'popular',
+      title: 'Popular',
+      type: 'boolean',
     },
     {
       name: 'description',

@@ -1,7 +1,10 @@
+import { GiDelicatePerfume } from 'react-icons/gi'
+
 export default {
   name: 'product',
   title: 'Product',
   type: 'document',
+  icon: GiDelicatePerfume,
   fields: [
     {
       name: 'title',
@@ -16,6 +19,22 @@ export default {
         source: 'title',
         maxLength: 96,
       },
+    },
+    {
+      name: 'gender',
+      title: 'Gender',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: { type: 'gender' },
+        },
+      ],
+    },
+    {
+      title: 'Sold',
+      name: 'sold',
+      type: 'number',
     },
     {
       title: 'Default variant',
@@ -33,40 +52,33 @@ export default {
         },
       ],
     },
-    {
-      title: 'Tags',
-      name: 'tags',
-      type: 'array',
-      of: [
-        {
-          type: 'string',
-        },
-      ],
-      options: {
-        layout: 'tags',
-      },
-    },
+
     {
       name: 'vendor',
       title: 'Vendor',
       type: 'reference',
-      to: {type: 'vendor'},
+      to: { type: 'vendor' },
     },
     {
       name: 'blurb',
       title: 'Blurb',
       type: 'localeString',
     },
+
     {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: {type: 'category'},
-        },
-      ],
+      name: 'top_notes',
+      title: 'Top notes',
+      type: 'string',
+    },
+    {
+      name: 'middle_notes',
+      title: 'Middle notes',
+      type: 'string',
+    },
+    {
+      name: 'base_notes',
+      title: 'Base notes',
+      type: 'string',
     },
     {
       name: 'body',
@@ -74,7 +86,9 @@ export default {
       type: 'localeBlockContent',
     },
   ],
-
+  initialValue: {
+    sold: 0,
+  },
   preview: {
     select: {
       title: 'title',

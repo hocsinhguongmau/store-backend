@@ -9,8 +9,8 @@ export default {
       type: 'string',
     },
     {
-      title: 'Weight in grams',
-      name: 'grams',
+      title: 'Size in ml',
+      name: 'ml',
       type: 'number',
     },
     {
@@ -21,12 +21,13 @@ export default {
     {
       title: 'SKU',
       name: 'sku',
-      type: 'string',
+      type: 'number',
     },
     {
-      title: 'Taxable',
-      name: 'taxable',
-      type: 'boolean',
+      title: 'Discount',
+      name: 'discount',
+      type: 'number',
+      validation: (Rule) => Rule.min(10).max(90),
     },
     {
       name: 'images',
@@ -40,11 +41,6 @@ export default {
           },
         },
       ],
-    },
-    {
-      title: 'Bar code',
-      name: 'barcode',
-      type: 'barcode',
     },
   ],
 }
