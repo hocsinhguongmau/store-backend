@@ -26,19 +26,14 @@ export default {
       type: 'image',
     },
     {
-      name: 'famous',
-      title: 'Famous',
-      type: 'boolean',
-    },
-    {
       name: 'popular',
       title: 'Popular',
       type: 'boolean',
     },
     {
-      name: 'description',
-      title: 'Description',
-      type: 'blockContent',
+      name: 'body',
+      title: 'Body',
+      type: 'localeBlockContent',
     },
   ],
   preview: {
