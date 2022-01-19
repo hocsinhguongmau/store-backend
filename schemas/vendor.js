@@ -20,11 +20,7 @@ export default {
         maxLength: 96,
       },
     },
-    {
-      name: 'logo',
-      title: 'logo',
-      type: 'image',
-    },
+
     {
       name: 'popular',
       title: 'Popular',
