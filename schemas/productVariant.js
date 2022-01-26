@@ -27,20 +27,10 @@ export default {
       title: 'Discount',
       name: 'discount',
       type: 'number',
-      validation: (Rule) => Rule.min(10).max(90),
-    },
-    {
-      name: 'images',
-      title: 'Images',
-      type: 'array',
-      of: [
-        {
-          type: 'image',
-          options: {
-            hotspot: true,
-          },
-        },
-      ],
+      validation: (Rule) => Rule.max(90),
     },
   ],
+  initialValue: {
+    sku: 100,
+  },
 }

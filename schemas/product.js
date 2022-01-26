@@ -37,6 +37,11 @@ export default {
       type: 'number',
     },
     {
+      title: 'Discount',
+      name: 'discount',
+      type: 'boolean',
+    },
+    {
       title: 'Default variant',
       name: 'defaultProductVariant',
       type: 'productVariant',
@@ -60,6 +65,19 @@ export default {
       to: { type: 'vendor' },
     },
     {
+      name: 'images',
+      title: 'Images',
+      type: 'array',
+      of: [
+        {
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
+    },
+    {
       name: 'blurb',
       title: 'Blurb',
       type: 'localeString',
@@ -68,17 +86,17 @@ export default {
     {
       name: 'top_notes',
       title: 'Top notes',
-      type: 'string',
+      type: 'localeString',
     },
     {
       name: 'middle_notes',
       title: 'Middle notes',
-      type: 'string',
+      type: 'localeString',
     },
     {
       name: 'base_notes',
       title: 'Base notes',
-      type: 'string',
+      type: 'localeString',
     },
     {
       name: 'body',
@@ -88,7 +106,9 @@ export default {
   ],
   initialValue: {
     sold: 0,
+    discount: false,
   },
+
   preview: {
     select: {
       title: 'title',

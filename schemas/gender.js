@@ -20,17 +20,5 @@ export default {
         maxLength: 96,
       },
     },
-
-    // {
-    //   name: 'parents',
-    //   title: 'Parent categories',
-    //   type: 'array',
-    //   of: [
-    //     {
-    //       type: 'reference',
-    //       to: [{ type: 'category' }],
-    //     },
-    //   ],
-    // },
   ],
 }

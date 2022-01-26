@@ -7,6 +7,10 @@ export default {
   icon: AiOutlineComment,
   fields: [
     {
+      name: 'name',
+      type: 'string',
+    },
+    {
       name: 'email',
       type: 'string',
     },
@@ -25,16 +29,24 @@ export default {
       type: 'reference',
       to: [{ type: 'product' }],
     },
+    {
+      name: 'rating',
+      type: 'number',
+      validation: (Rule) => Rule.max(5),
+    },
   ],
+  initialValue: {
+    rating: 0,
+  },
   preview: {
     select: {
       name: 'name',
       comment: 'comment',
       product: 'product.title',
     },
-    prepare({ name, comment, post }) {
+    prepare({ name, comment, product }) {
       return {
-        title: `${name} on ${post}`,
+        title: `${name} on ${product}`,
         subtitle: comment,
       }
     },
