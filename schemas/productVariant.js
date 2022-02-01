@@ -27,10 +27,11 @@ export default {
       title: 'Discount',
       name: 'discount',
       type: 'number',
-      validation: (Rule) => Rule.max(90),
+      validation: (Rule) => Rule.min(0).max(90),
     },
   ],
   initialValue: {
     sku: 100,
+    discount: 0,
   },
 }

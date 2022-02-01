@@ -22,7 +22,7 @@ export default {
     },
     {
       name: 'comment',
-      type: 'text',
+      type: 'blockContent',
     },
     {
       name: 'product',
@@ -41,12 +41,11 @@ export default {
   preview: {
     select: {
       name: 'name',
-      comment: 'comment',
       product: 'product.title',
     },
     prepare({ name, comment, product }) {
       return {
-        title: `${name} on ${product}`,
+        title: `${name} commented on ${product}`,
         subtitle: comment,
       }
     },
