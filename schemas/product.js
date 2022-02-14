@@ -1,4 +1,5 @@
 import { GiDelicatePerfume } from 'react-icons/gi'
+import React from 'react'
 
 export default {
   name: 'product',
@@ -112,8 +113,13 @@ export default {
   preview: {
     select: {
       title: 'title',
-      manufactor: 'manufactor.title',
-      media: 'defaultProductVariant.images[0]',
+      vendor: 'vendor.title',
+      media: 'images[0].asset',
+    },
+    prepare({ title, vendor }) {
+      return {
+        title: `${title} by ${vendor}`,
+      }
     },
   },
 }

@@ -1,5 +1,4 @@
 import { BsCashStack } from 'react-icons/bs'
-
 export default {
   name: 'payment',
   title: 'Payment',
@@ -7,8 +6,8 @@ export default {
   icon: BsCashStack,
   fields: [
     {
-      name: 'orderId',
-      title: 'Order ID',
+      name: 'email',
+      title: 'Email',
       type: 'string',
     },
     {
@@ -16,5 +15,18 @@ export default {
       title: 'Status',
       type: 'string',
     },
+    {
+      title: 'Carts',
+      name: 'carts',
+      type: 'array',
+      of: [{ type: 'cartItem' }],
+    },
+    {
+      title: 'User Info',
+      name: 'userInfo',
+      type: 'array',
+      of: [{ type: 'userInfo' }],
+    },
+    { name: 'total', title: 'Total', type: 'string' },
   ],
 }

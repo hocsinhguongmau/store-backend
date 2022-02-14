@@ -7,6 +7,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import blockContent from './blockContent'
 import gender from './gender'
 import product from './product'
+import favorite from './favorite'
 import vendor from './vendor'
 import productVariant from './productVariant'
 
@@ -15,6 +16,8 @@ import localeText from './locale/Text'
 import localeBlockContent from './locale/BlockContent'
 import comment from './comment'
 import payment from './payment'
+import userInfo from './userInfo'
+import cartItem from './cartItem'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -29,7 +32,10 @@ export default createSchema({
     vendor,
     gender,
     payment,
+    favorite,
     comment,
+    userInfo,
+    cartItem,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
